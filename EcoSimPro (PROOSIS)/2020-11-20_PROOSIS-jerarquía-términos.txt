@@ -1,0 +1,12 @@
+WORKSPACE (colección de librerías)
+LIBRARY ("aglutinar" componentes)
+    funciones básicas (MATH)                         <--- no tocar
+    componentes "reutilizables" & puertos (LPRES)    <--- no tocar
+    modelos "completos" o sistemas (LPRES_EXAMPLES)  <--- lo que haremos
+COMPONENTS (MODELO FÍSICO) (plantear las ecuaciones, sistema abierto)
+    source code
+    "schematics"
+PARTITION (MODELO MATEMÁTICO) (definir I/O para cerrar ese sistema)
+    problemas de "diseño"
+    problemas de "actuaciones"
+EXPERIMENT (aplicación numérica)

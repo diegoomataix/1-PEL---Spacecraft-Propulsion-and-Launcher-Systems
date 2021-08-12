@@ -1,0 +1,17 @@
+                INPUT               g.d.l.                  OUTPUT
+                =====               ======                  ======
+
+
+
+DISEÑO           E @ fconds          Pc                      GEOMETRÍA
+======           Isp máx.            Tc (O/F)                (materiales)
+                 DeltaV dado         Ag
+                 precio (prop.)
+                 ...
+
+
+
+ACTUACIONES      GEOMETRÍA           régimen (válvulas)      E
+===========                          condición de vuelo      Isp
+                                                             ...
+                                                             ("cosas" operacionales)

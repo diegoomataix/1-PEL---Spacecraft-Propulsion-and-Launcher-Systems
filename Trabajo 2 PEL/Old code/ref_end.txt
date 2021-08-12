@@ -1,0 +1,66 @@
+    %% Otros Criterios de Optimización
+
+% Variación OF
+OF_inicial = 0.1;
+OF_final = 20;
+n_puntos_OF = 20;
+paso_OF = (OF_final - OF_inicial)/(n_puntos_OF - 1);
+
+syms OF_cc
+
+syms mf_pc mf_cc % de momento hasta q sepa calcularlas
+
+mox_pc = mf_pc*OF_pc;
+mox_cc = mf_cc*OF_cc;
+
+mf = mf_cc + mf_pc;
+mox = mox_cc + mox_pc;
+mt = mf_pc + mox_pc;
+
+% Variación Pc [Pa]
+Pc_inicial = 5*1e6; % 1MPa
+Pc_final = 50*1e6; % 15MPa
+n_puntos_Pc = 20;
+paso_Pc = (Pc_final - Pc_inicial)/(n_puntos_Pc - 1);
+
+% for OF_cc = OF_inicial:paso_OF:OF_final
+%     x_cc = OF_cc*M_h2/M_o2;
+%     OF_st = 8;
+%     if OF_cc > OF_st % Pobre -- Exceso de Oxidante
+%         a_cc = 1;
+%         b_cc = 0;
+%         c_cc = x_cc - 1/2;
+%         Mezcla = 'pobre';
+%     else % Rica
+%         a_cc = 2*x_cc;
+%         b_cc = 1-2*x_cc;
+%         c_cc = 0;
+%         Mezcla = 'rica';
+%     end
+%     for Pc_cc = Pc_inicial:paso_Pc:Pc_final
+%         syms mf_pc mf_cc
+%         Q = [subs(Q), subs(calor_h20)];
+%         S = solve(Q);
+%         
+% %         mf_cc = vpa(S.mf_cc);
+% %         mf_pc = vpa(S.mf_pc);
+%         Km(i,j) = (vpa(subs((K_ox*mox/mf+K_f)/(mox/mf+1))));
+%         rho_p(i,j) = (vpa(subs((mox/mf+1)/((mox/mf)/rho_ox + 1 / rho_f))));
+%        % Delta_V(i,j)=double(vpa(subs(Isp(i,j)*log((1+Km(i,j)/(r+Km(i,j))))));
+%         
+%         % Gastos de oxidante
+%         c_estrella(i,j) = double(vpa(subs(c_star)));
+%         C_empuje(i,j) = double(vpa(subs(C_E)));
+%         
+%         MO(i,j) = (vpa(subs(mox_cc + mox_pc)));
+%         MO_principal(i,j) = (vpa(subs(mox_cc)));
+%         MO_sangrado(i,j) = (vpa(subs(mox_pc)));
+%         
+%         % Gastos de oxidante
+%         MF(i,j) = (vpa(subs(mf_cc + mf_pc)));
+%         MF_principal(i,j) = (vpa(subs(mf_cc)));
+%         MF_sangrado(i,j) = (vpa(subs(mf_pc)));
+%         
+%         j = j + 1;
+%     end
+% end

@@ -1,0 +1,14 @@
+PREGUNTAS
+
+** WHY T_C CONSTANT? --> WHY C ESTRELLA CONSTANT??, vale T_c_save está en matriz 10x10, podemos sacar lo mismo para c*?
+
+** PLOT GENERAL O/F OR  O/F
+
+** MATRIZ DE O/F CC ES DE 10X10? LA PLOTEAMOS? COMO? solucionar error.
+
+** SALTOS PRESION BOMBAS DEL ORDEN DE 10^7?
+
+** gastos masicos bombas del orden de 0.0476, 0.9524, Estaban Normalizados con gasto masico total? (m_bf, m_bo), y estos:
+		camara combustion, pre camara 0.045, 0.0025(m_f_c, m_f_pc)?
+
+** 

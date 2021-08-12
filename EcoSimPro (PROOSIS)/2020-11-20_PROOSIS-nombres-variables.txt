@@ -1,0 +1,3 @@
+NOMBRES DE LAS VARIABLES
+
+    [componente].(puerto).magnitud
